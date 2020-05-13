@@ -17,6 +17,10 @@ const args = arg({
     '-h':        '--help',
     '-o':        '--open',
 });
+if(args["--version"]){console.log(pkg.version);return;}
+
+
 console.log("work dir:"+cwd)
 console.log("paramers:")
-debug(args);
+console.log(args);
+console.log(pkg);

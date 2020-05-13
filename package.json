@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zq1988626/webdev-cli/issues"
   },
-  "homepage": "https://github.com/zq1988626/webdev-cli#readme"
+  "homepage": "https://github.com/zq1988626/webdev-cli#readme",
+  "devDependencies": {
+    "arg": "^4.1.3"
+  }
 }
