@@ -1,11 +1,11 @@
 {
   "name": "webdev-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "node webdev test",
   "main": "index.js",
   "bin": {
-    "webdev-cli": "webdev-cli.js",
-    "webdev": "webdev-cli.js"
+    "webdev-cli": "./bin/webdev-cli.js",
+    "webdev": "./bin/webdev-cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
