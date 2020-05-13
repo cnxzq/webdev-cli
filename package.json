@@ -1,6 +1,6 @@
 {
   "name": "webdev-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node webdev test",
   "main": "index.js",
   "bin": {
