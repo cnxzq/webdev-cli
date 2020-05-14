@@ -1,26 +1,13 @@
 #!/usr/bin/env node
-const cwd = process.cwd();
-const arg = require("arg")
-const pkg = require("../package.json")
-
-const args = arg({
-    // Types
-    '--help':    Boolean,
-    '--debug':    Boolean,
-    '--version': Boolean,
-    '--open': Boolean,
-    '--verbose': arg.COUNT,   // Counts the number of times --verbose is passed
-    '--port':    Number,      // --port <number> or --port=<number>
-    // Aliases
-    '-p':        '--port',
-    '-v':        '--version',
-    '-h':        '--help',
-    '-o':        '--open',
-});
-if(args["--version"]){console.log(pkg.version);return;}
-
-
-console.log("work dir:"+cwd)
-console.log("paramers:")
-console.log(args);
-console.log(pkg);
+"use strict";
+var program = require('commander');
+var pkg = require("../package.json");
+program
+    .version(pkg.version, '-v, --version', "输出版本号")
+    .option('-t --test <size>', '披萨尺寸', /^(large|medium|small)$/i, 'medium')
+    .option('-d --drink [drink]', 'Drink', /^(coke|pepsi|izze)$/i)
+    .usage('<command> [option]') //, 'option --type required'
+    .command('npm', '使用npm命令')
+    .command('serve', '使用serve命令')
+    .command('git', '使用git命令')
+    .parse(process.argv);
