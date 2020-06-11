@@ -20,7 +20,7 @@ export namespace git {
         message:string="\"from webdev-cli git push\"",
         cwd:string=process.cwd()
     ):Promise<any> {
-        //console.log(`message:${message} cwd:${cwd}`);
+        console.log(`message:${message} cwd:${cwd}`);
         return execs([
             ["git","add","."],
             ["git","commit","-m",message],
